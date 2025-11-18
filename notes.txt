@@ -1,11 +1,20 @@
-Pull Request with the merge option
+Pull Request with the "Merge Commit" option
     - Adds all new commits from "develop" into "main". Thesese commits are with the same hash in "develop and "main"
     - Writes additional commit containing all the changes and asks you to name it
     - Merging "main" into "develop, will only add the extra merge commit
         - from branch develop running "git pull origin main" will only add 
 
-Pull Request with sqash commit option
+Pull Request with "Sqash Commit" option
     - Squash all commits into one single one
     - Asks you to name the squashed commit
     - merging main into develop will add the squashed commit with the same hash 
-    - from branch develop "git pull origin main" will create the extre merge commit
+    - from branch develop "git pull origin main" will create an additional merge commit
+------------------------------------------------------------------------------------------------------------
+Good GIT Strategy could be:
+    - Always add tags on the main branch
+    - Merge develop into main using the "Merge Commit" option
+    - After merging into main, merge the extra commit from main into develop
+    - When project is of multiple people, merge peoples branches into develop using the "Squash Commit" option
+    - Never use rebase option if you plan to merge the same branch into main multiple times!
+
+This strategy will create clean commit history in main and develop branch, with extra merge commit only when making a release, because on releases we have to merge develop into main
