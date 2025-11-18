@@ -1,3 +1,11 @@
 Pull Request with the merge option
-    - Adds all new commits from the branch we want to merge into "main"
+    - Adds all new commits from "develop" into "main". Thesese commits are with the same hash in "develop and "main"
     - Writes additional commit containing all the changes and asks you to name it
+    - Merging "main" into "develop, will only add the extra merge commit
+        - from branch develop running "git pull origin main" will only add 
+
+Pull Request with sqash commit option
+    - Squash all commits into one single one
+    - Asks you to name the squashed commit
+    - merging main into develop will add the squashed commit with the same hash 
+    - from branch develop "git pull origin main" will create the extre merge commit
